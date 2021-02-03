@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+
+  <link rel="stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> 
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <!--NES -->
+  <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+  <!-- latest NES -->
+  <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+  <!-- core style only NES -->
+  <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="marioStyle.css">
+  
+  <script src= "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src= "https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="marioMove.js"></script>
+  
+</head>
+<body>
+
+<!-- <audio autoplay id="mario-jump"><source src="audio/mario-jump.mp3" id="J" type="audio/mpeg"></audio>  -->
+<!-- <audio autoplay muted loop id="mario-background-music"><source src="audio/mario-background-music.mp3" type="audio/mpeg"></audio>  -->
+<!-- <audio autoplay id="its-me-mario"><source src="audio/its-me-mario.mp3" id="I" type="audio/mpeg"></audio> --> 
+<audio autoplay id="mario-coin"><source src="audio/mario-coin.mp3" id="C" type="audio/mpeg"></audio> 
+
+<div class="container-fluid overflow-auto">
+  <div class="world">
+  <div class="row">
+    <div class="col-1">
+      <div class="row">
+        <div class="col-sm">
+          <div class="sprite tunnel1-vertical-extenders-top"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="tunnel1-vertical-extenders"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-10">
+      <div class="row">
+        <div class="col-sm">
+          <div class="entryMessage entryMessageShow">
+            <div class="nes-container is-dark with-title">
+              <p class="title">Hello there !</p>
+              <p>Welcome to my Online Portfolio. Below you will find my portfolio of web work. Explore the site using arrow-keys</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="message messageHide">
+            <div class="nes-container is-dark with-title">
+              <p class="title">About</p>
+              <p>Hello ! I'm Pranav Sriram, A young web developer. I completed my undergrad (B.tech) at National Institute of Technology, Trichy (NIT-T) as a Instrumentation and Control Engineer. Presently I'm working as a UI/UX Developer at Aurigo with the Product Engineering team based out of Bangalore, India. It's a great gig, and I'm getting to learn a lot of stuff about various frameworks. Apart from technical stuff, I love video games and spends most of my spare time grinding through ranks of Dota. Also, if you want to know more about what I code, Hit the Resumè and Projects Boxes. (:<p>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="contact-area messageHide mt-3">
+            <div class="nes-container is-dark with-title">
+              <p class="title">Contact</p>
+              <div class="row d-flex justify-content-around">
+                <div class="col-xs-4">
+                  <div><a href="https://github.com/Pranav4399"><i class="nes-icon github is-medium"></i></a></div>
+                </div>
+                <div class="col-xs-4">
+                  <div><a href="mailto:psriram37@gmail.com"><i class="nes-icon gmail is-medium"></i></a></div>
+                </div>
+                <div class="col-xs-4">
+                  <div><a href="https://www.linkedin.com/in/pranavsriram/"><i class="nes-icon linkedin is-medium"></i></a></div>
+                </div>
+              </div>
+            </div>
+        <!-- <form class="form-horizontal" id="contactForm" method="post">  
+          <div class="row">
+            <div class="form-group input-group  input-group-sm col-sm mt-2">
+              <input type="name" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Name">
+            </div>
+          </div>
+          <div class="row"> 
+            <div class="form-group input-group  input-group-sm col-sm">
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group input-group  input-group-lg col-sm">
+              <input type="text" class="form-control form-control-lg" id="exampleInputMessage" placeholder="Message">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-sm mt-1">
+              <button type="submit" class="btn btn-warning btn-sm mb3">Submit</button>
+            </div>
+          </div>
+        </form> -->
+        </div>
+      </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="col cloud"></div>
+      </div>
+    </div>
+
+    <div class="col-1">
+        <div class="row">
+        <div class="col">
+          <div class="sprite tunnel2-vertical-extenders-top"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="tunnel2-vertical-extenders"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-3">
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <div class="col">
+              <div class="tunnel1-horizontal-vertical"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <div class="sprite tunnel1-connector"></div>
+            </div>
+            <div class="col-8">
+              <img src="images/about.png" class="pipeText1">
+            </div>
+          </div>
+        </div>
+      </div>
+          <div class="row">
+            <div class="col">
+              <div class="sprite tunnel1-horizontal-extenders"></div>
+              <div class="sprite tunnel1-horizontal"></div> 
+            </div>
+          </div>
+    </div>
+
+    <div class="col-6">
+      <div class="row">
+        <div class="col-6 mx-auto">
+          <div class="row">
+            <div class="col">
+              <img src="images/projects.png" class="boxText1 img-fluid mb-3 ml-3" alt="Projects">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <div class="coin1 ml-5"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="box1 ml-5"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 mt-auto">
+          <div class="row">
+            <div class="col text-right">
+              <img src="images/resume.png" class="boxText2 img-fluid mb-3 mr-3" alt="Resume">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <div class="coin2 mr-5"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="box2 mr-5 mb-5"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <div class="col">
+              <div class="tunnel2-horizontal-vertical"></div> 
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <img src="images/contact.png" class="pipeText2">
+            </div>
+            <div class="col-4">
+              <div class="sprite tunnel2-connector"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="sprite tunnel2-horizontal-extenders"></div>
+          <div class="sprite tunnel2-horizontal"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col" align="center">
+      <div class="sprite mario mario--fall"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col environment">
+      <div class="ground">
+        <div class="row">
+          <div class="col d-flex justify-content-center fixed-bottom">
+            <p>Made with <span><i class="nes-icon is-small heart"></i></span> by Pranav</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+</div>
+</body>
+</html>
+
