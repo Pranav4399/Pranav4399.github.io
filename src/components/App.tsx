@@ -17,6 +17,7 @@ const App = () => {
 
   const startIndex = (currentPage - 1) * recordsPerPage;
   const endIndex = startIndex + recordsPerPage;
+
   const displayedProjects = projects.slice(startIndex, endIndex);
   const totalPages = Math.ceil(projects.length / recordsPerPage);
 
@@ -50,11 +51,11 @@ const App = () => {
           {getPageNumbers().map((page, index) => (
             <li key={index} className={`pagination-item ${page === currentPage ? 'active' : ''}`}>
               {typeof page === 'number' ? (
-                <button onClick={() => handlePageClick(page)} aria-label={`Go to page ${page}`} className="page-button">
+                <button role='button' onClick={() => handlePageClick(page)} aria-label={`Go to page ${page}`} className="page-button">
                   {page}
                 </button>
               ) : (
-                <span className="dots" aria-hidden="true">
+                <span className="dots">
                   {page}
                 </span>
               )}
