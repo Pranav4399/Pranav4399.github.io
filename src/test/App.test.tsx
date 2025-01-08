@@ -2,6 +2,8 @@ import { render, screen, waitFor } from '@testing-library/react';
 import App from '../components/App';
 import '@testing-library/jest-dom'
 
+declare const global: any;
+
 global.fetch = jest.fn(() =>
   Promise.resolve({
     ok: true,
